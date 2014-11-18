@@ -3,6 +3,10 @@ Bundler::GemHelper.install_tasks
 
 require 'rspec/core/rake_task'
 require 'spree/testing_support/extension_rake'
+require 'bower-rails'
+
+spec = Gem::Specification.find_by_name 'bower-rails'
+load "#{spec.gem_dir}/lib/tasks/bower.rake"
 
 RSpec::Core::RakeTask.new
 

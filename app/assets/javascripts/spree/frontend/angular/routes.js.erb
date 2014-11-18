@@ -1,0 +1,81 @@
+//= depend_on_asset "templates/spree/store/index.html"
+//= depend_on_asset "templates/spree/store/home.html"
+//= depend_on_asset "templates/spree/store/products/index.html"
+//= depend_on_asset "templates/spree/store/products/quickview.html"
+//= depend_on_asset "templates/spree/store/product.html"
+//= depend_on_asset "templates/spree/store/topic.html"
+//= depend_on_asset "templates/spree/checkout/index.html"
+//= depend_on_asset "templates/spree/checkout/registration.html"
+//= depend_on_asset "templates/spree/checkout/address.html"
+
+app.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise("/error");
+
+	$stateProvider
+      .state('store', {
+      	url: "",
+      	templateUrl: "<%= asset_path('templates/spree/store/index.html') %>"
+      })
+	  .state('store.home', {
+	  	url: "/",
+	  	templateUrl: "<%= asset_path('templates/spree/store/home.html') %>"
+	  })
+	  .state('store.products', {
+	  	url: "/products",
+	  	templateUrl: "<%= asset_path('templates/spree/store/products/index.html') %>"
+	  })
+	  .state('store.products.quickview', {
+	  	url: "/products/:product_id/quickview",
+	  	templateUrl: "<%= asset_path('templates/spree/store/products/quickview.html') %>"
+	  })
+	  .state('store.product', {
+	  	url: "/products/:product_id",
+	  	templateUrl: "<%= asset_path('templates/spree/store/product.html') %>",
+	  	controller: 'ProductCtrl'
+	  })
+	  .state('store.topic', {
+	  	url: "/t/:topic_id",
+	  	templateUrl: "<%= asset_path('templates/spree/store/topic.html') %>"
+	  })
+	  .state('store.cart', {
+
+	  })
+	  .state('store.order', {
+
+	  })
+	  .state('store.account', {
+
+	  })
+	  .state('store.contact-us', {
+
+	  })
+	  .state('store.shipping-policy', {
+
+	  })
+	  .state('store.privacy-policy', {
+
+	  })
+	  .state('store.terms-and-conditions', {
+
+	  })
+	  .state('checkout', {
+	  	templateUrl: "<%= asset_path('templates/spree/checkout/index.html') %>"
+	  })
+	  .state('checkout.registration', {
+	  	url: "/checkout/registration",
+	  	templateUrl: "<%= asset_path('templates/spree/checkout/registration.html') %>"
+	  })
+	  .state('checkout.address', {
+	  	url: "/checkout/address",
+	  	templateUrl: "<%= asset_path('templates/spree/checkout/address.html') %>"
+	  })
+	  .state('checkout.delivery', {
+
+	  })
+	  .state('checkout.payment', {
+
+	  })
+	  .state('checkout.confirm', {
+
+	  })
+});

@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description = 'AngularJS frontend for Spree'
   s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'You'
+  s.author    = 'Kyle Van Wagenen'
   # s.email     = 'you@example.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 
@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '~> 2.3.4'
+  s.add_dependency 'bower-rails', '~> 0.9.2'
+  s.add_dependency 'angular-rails-templates', '~> 0.1.3'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'

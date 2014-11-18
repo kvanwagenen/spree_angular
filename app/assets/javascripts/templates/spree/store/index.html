@@ -1,0 +1,21 @@
+<style>
+#nav-bar, #footer {
+	width: 100%; 
+	background-color: blue; 
+	height: 30px;
+}
+#nav-bar a {
+	display: inline-block;
+	vertical-align: middle;
+}
+</style>
+<header>Store</header>
+<div id="nav-bar">
+	<ul>
+		<a ui-sref="store.home">Home</a>
+		<a ui-sref="store.products">Products</a>
+		<a ui-sref="store.topic">Topic</a>
+	</ul>
+</div>
+<div ui-view></div>
+<div id="footer">Footer</div>
